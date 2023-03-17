@@ -1,0 +1,8 @@
+@import "./helpers/mixins.scss";
+@import "./helpers/variables.scss";
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: $background__color;
+}

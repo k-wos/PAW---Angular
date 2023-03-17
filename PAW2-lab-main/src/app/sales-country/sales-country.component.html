@@ -1,0 +1,16 @@
+<app-card-component>
+  <div class="container">
+    <div class="header-component">
+      <h4 class="title">Sales by Country</h4>
+      <a href="" class="link-text">View Full Report</a>
+    </div>
+    <div class="content">
+      <img src="../../assets/map.png" alt="" class="map" />
+      <div class="charts-container">
+        <app-sales-country-chart
+          [countryChartList]="salesCountryCharts"
+        ></app-sales-country-chart>
+      </div>
+    </div>
+  </div>
+</app-card-component>

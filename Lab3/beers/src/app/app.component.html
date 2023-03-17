@@ -1,0 +1,3 @@
+<h1>Beer!</h1>
+<app-beer-list (selectedBeer)="onBeerSelected($event)" [list]="beerList"></app-beer-list>
+<app-beer-details *ngIf="selectedBeer" [beer]="selectedBeer"></app-beer-details>

@@ -1,0 +1,31 @@
+<app-card-component *ngFor="let chart of chartList">
+  <div class="container">
+    <p class="title">{{ chart.title }}</p>
+    <div class="content-box">
+      <div class="numbers-box">
+        <p class="number">{{ chart.number }}</p>
+        <div class="change-box">
+          <img
+            *ngIf="!chart.increase"
+            src="../../assets/red_arrow.png"
+            alt=""
+            class="arrow-img"
+          />
+          <img
+            *ngIf="chart.increase"
+            src="../../assets/green_arrow.png"
+            alt=""
+            class="arrow-img"
+          />
+          <div *ngIf="!chart.increase" class="change-percent decrease">
+            {{ chart.changePercent }}
+          </div>
+          <div *ngIf="chart.increase" class="change-percent increase">
+            {{ chart.changePercent }}
+          </div>
+        </div>
+      </div>
+      <img src="../../assets/green_chart.png" alt="" class="chart-img" />
+    </div>
+  </div>
+</app-card-component>

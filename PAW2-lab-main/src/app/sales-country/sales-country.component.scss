@@ -1,0 +1,21 @@
+.header-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 30px 0;
+}
+
+.map {
+  width: 340px;
+  height: 200px;
+}
+
+app-card-component {
+  margin-bottom: 10px;
+}

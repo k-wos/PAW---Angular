@@ -1,0 +1,15 @@
+@import "../../helpers/mixins.scss";
+@import "../../helpers/variables.scss";
+
+.top-chart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart {
+  width: 200px;
+}
+
+.sum, .country {
+  @include small-gray-font;
+}

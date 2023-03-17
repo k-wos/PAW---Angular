@@ -1,0 +1,37 @@
+@import "../../helpers/mixins.scss";
+@import "../../helpers/variables.scss";
+
+.container {
+  width: 285px;
+  height: 100%;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.change-box {
+  display: flex;
+}
+
+.chart-img {
+  width: 100px;
+  height: 45px;
+}
+
+.title {
+  margin: 0;
+}
+
+.arrow-img {
+  width: 10px;
+}
+
+.increase {
+  color: $green__color;
+}
+
+.decrease {
+  color: $red__color;
+}

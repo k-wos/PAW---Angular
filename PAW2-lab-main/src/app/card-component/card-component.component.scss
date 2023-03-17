@@ -1,0 +1,7 @@
+@import '../../helpers/mixins.scss';
+@import '../../helpers/variables.scss';
+
+.container {
+  @include card-styles;
+  background-color: white;
+}

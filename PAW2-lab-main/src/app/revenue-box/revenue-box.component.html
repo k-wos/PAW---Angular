@@ -1,0 +1,10 @@
+<app-card-component *ngFor="let revenue of revenueList">
+  <div class="container">
+    <img class="icon" src="{{ revenue.icon }}" alt="Icon" />
+    <div class="text-box">
+      <p class="sum">{{ revenue.sum }}</p>
+      <p class="text">{{ revenue.text }}</p>
+    </div>
+    <img class="dots" src="../../assets/dots.png" alt="More" />
+  </div>
+</app-card-component>

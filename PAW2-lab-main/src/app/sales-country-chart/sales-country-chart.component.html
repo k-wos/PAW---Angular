@@ -1,0 +1,36 @@
+<div class="container" *ngFor="let chart of countryChartList">
+  <div class="top-chart">
+    <p class="country">{{ chart.country }}</p>
+    <p class="sum">{{ chart.sum }}</p>
+  </div>
+  <img
+    *ngIf="chart.color === colorsEnum.Violet"
+    src="../../assets/chart-line/violet.png"
+    alt=""
+    class="chart"
+  />
+  <img
+    *ngIf="chart.color === colorsEnum.Green"
+    src="../../assets/chart-line/green.png"
+    alt=""
+    class="chart"
+  />
+  <img
+    *ngIf="chart.color === colorsEnum.Red"
+    src="../../assets/chart-line/red.png"
+    alt=""
+    class="chart"
+  />
+  <img
+    *ngIf="chart.color === colorsEnum.Yellow"
+    src="../../assets/chart-line/yellow.png"
+    alt=""
+    class="chart"
+  />
+  <img
+    *ngIf="chart.color === colorsEnum.Orange"
+    src="../../assets/chart-line/orange.png"
+    alt=""
+    class="chart"
+  />
+</div>

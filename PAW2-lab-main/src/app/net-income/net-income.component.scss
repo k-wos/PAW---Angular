@@ -1,0 +1,24 @@
+@import "../../helpers/mixins.scss";
+@import "../../helpers/variables.scss";
+
+.header-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+select {
+  margin: 0 5px;
+}
+
+.chart {
+  width: 95%;
+}
+
+.avg-text {
+  color: $violet__color;
+}
+
+app-card-component {
+  margin: 10px;
+}
