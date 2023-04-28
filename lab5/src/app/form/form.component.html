@@ -1,0 +1,29 @@
+<form [formGroup]="orderForm" >
+
+    <label for="name">Imię: </label>
+    <input id="name" type="text" formControlName="name">
+
+    <label for="surname">Nazwisko: </label>
+    <input id="surname" type="text" formControlName="surname">
+
+    <label for="address">Adres: </label>
+    <input id="address" type="text" formControlName="address">
+
+    <label for="paymentMethod">Metoda płatnosci: </label>
+    <input id="paymentMethof" type="text" formControlName="paymentMethod">
+
+    <div formGroupName="order">
+        <h2>Zamowienie</h2>
+        <label for="itemName">Nazwa: </label>
+        <input id="itemName" type="text" formControlName="itemName">
+
+        <label for="quantity">Ilośc: </label>
+        <input id="quantity" type="text" formControlName="quantity">
+
+        <label for="price">Cena jednostkowa: </label>
+        <input id="price" type="text" formControlName="price">
+    </div>
+    
+    <button type="submit">Submit</button>
+
+</form>

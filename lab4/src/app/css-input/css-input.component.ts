@@ -17,6 +17,6 @@ export class CssInputComponent {
   @Output() styles = new EventEmitter();
   protected onGenerateCSS() {
     console.log(this.css.color)
-    this.css.color = 'czerwony'
+     this.css.color
   }
 }
