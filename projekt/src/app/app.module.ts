@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { AsideNavComponent } from './aside-nav/aside-nav.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { FunctionalityListComponent } from './functionality-list/functionality-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [	
@@ -18,7 +20,9 @@ import { FunctionalityListComponent } from './functionality-list/functionality-l
       FunctionalityListComponent
    ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

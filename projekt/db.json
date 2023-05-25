@@ -1,0 +1,40 @@
+{
+  "functionalities": [
+    {
+      "id": 1,
+      "name": "Funkcjonalność 1",
+      "description": "Opis funkcjonalności 1",
+      "priority": "Niski",
+      "project": "Projekt 1",
+      "owner": "Właściciel 1",
+      "status": "todo"
+    },
+    {
+      "id": 2,
+      "name": "Funkcjonalność 2",
+      "description": "Opis funkcjonalności 2",
+      "priority": "Średni",
+      "project": "Projekt 2",
+      "owner": "Właściciel 2",
+      "status": "doing"
+    },
+    {
+      "id": 3,
+      "name": "Funkcjonalność 3",
+      "description": "Opis funkcjonalności 3",
+      "priority": "Wysoki",
+      "project": "Projekt 3",
+      "owner": "Właściciel 3",
+      "status": "done"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "priority": "a",
+      "project": "a",
+      "owner": "a",
+      "status": "doing",
+      "id": 4
+    }
+  ]
+}

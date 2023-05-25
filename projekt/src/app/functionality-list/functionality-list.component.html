@@ -1,1 +1,118 @@
-<p>functionality-list works!</p>
+<h2>Lista funkcjonalności</h2>
+
+<!-- Wyświetlanie listy funkcjonalności -->
+<ul>
+  <li *ngFor="let functionality of functionalities">
+    <span>{{ functionality.name }}</span> -
+    <span>{{ functionality.description }}</span>
+    <span>{{ functionality.priority }}</span> -
+    <span>{{ functionality.project }}</span>
+    <span>{{ functionality.owner }}</span> -
+    <span>{{ functionality.status }}</span>
+    <button (click)="updateFunctionality(functionality)">Edytuj</button>
+    <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
+  </li>
+</ul>
+
+<!-- Formularz dodawania nowej funkcjonalności -->
+<form (submit)="addFunctionality(newFunctionality)">
+  <h3>Dodaj nową funkcjonalność</h3>
+  <label>
+    Nazwa:
+    <input
+      type="text"
+      name="functionalityName"
+      [(ngModel)]="newFunctionality.name"
+    />
+  </label>
+  <label>
+    Opis:
+    <input
+      type="text"
+      name="functionalityDescription"
+      [(ngModel)]="newFunctionality.description"
+      required
+    />
+  </label>
+  <label>
+    Priorytet:
+    <input
+      type="text"
+      name="functionalityPriority"
+      [(ngModel)]="newFunctionality.priority"
+      required
+    />
+  </label>
+  <label>
+    Projekt:
+    <input
+      type="text"
+      name="functionalityProject"
+      [(ngModel)]="newFunctionality.project"
+      required
+    />
+  </label>
+  <label>
+    Właściciel:
+    <input
+      type="text"
+      name="functionalityOwner"
+      [(ngModel)]="newFunctionality.owner"
+      required
+    />
+  </label>
+  <label>
+    Stan:
+    <select
+      name="functionalityState"
+      [(ngModel)]="newFunctionality.status"
+      required
+    >
+      <option value="todo">Do zrobienia</option>
+      <option value="doing">W trakcie</option>
+      <option value="done">Gotowe</option>
+    </select>
+  </label>
+  <button type="submit">Dodaj</button>
+</form>
+
+<!-- Formularz edycji funkcjonalności -->
+<form
+  *ngIf="selectedFunctionality"
+  (submit)="updateFunctionality(selectedFunctionality)"
+>
+  <h3>Edytuj funkcjonalność</h3>
+  <label>
+    Nazwa:
+    <input type="text" [(ngModel)]="selectedFunctionality.name" required />
+  </label>
+  <label>
+    Opis:
+    <input
+      type="text"
+      [(ngModel)]="selectedFunctionality.description"
+      required
+    />
+  </label>
+  <label>
+    Priorytet:
+    <input type="text" [(ngModel)]="selectedFunctionality.priority" required />
+  </label>
+  <label>
+    Projekt:
+    <input type="text" [(ngModel)]="selectedFunctionality.project" required />
+  </label>
+  <label>
+    Właściciel:
+    <input type="text" [(ngModel)]="selectedFunctionality.owner" required />
+  </label>
+  <label>
+    Stan:
+    <select [(ngModel)]="selectedFunctionality.status" required>
+      <option value="todo">Do zrobienia</option>
+      <option value="doing">W trakcie</option>
+      <option value="done">Gotowe</option>
+    </select>
+  </label>
+  <button type="submit">Zapisz</button>
+</form>
