@@ -17,33 +17,6 @@
       "project": "Projekt 2",
       "owner": "Właściciel 2",
       "status": "doing"
-    },
-    {
-      "id": 3,
-      "name": "Funkcjonalność 3",
-      "description": "Opis funkcjonalności 3",
-      "priority": "Wysoki",
-      "project": "Projekt 3",
-      "owner": "Właściciel 3",
-      "status": "done"
-    },
-    {
-      "name": "a",
-      "description": "a",
-      "priority": "a",
-      "project": "a",
-      "owner": "a",
-      "status": "doing",
-      "id": 4
-    },
-    {
-      "name": "a",
-      "description": "a",
-      "priority": "a",
-      "project": "c",
-      "owner": "a",
-      "status": "doing",
-      "id": 5
     }
   ]
 }

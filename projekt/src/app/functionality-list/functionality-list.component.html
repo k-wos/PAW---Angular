@@ -2,14 +2,14 @@
 
 <ul>
   <li *ngFor="let functionality of functionalities">
-    <span>{{ functionality.name }}</span> -
+    <span>{{ functionality.name }}</span> 
     <span>{{ functionality.description }}</span>
-    <span>{{ functionality.priority }}</span> -
+    <span>{{ functionality.priority }}</span> 
     <span>{{ functionality.project }}</span>
-    <span>{{ functionality.owner }}</span> -
+    <span>{{ functionality.owner }}</span> 
     <span>{{ functionality.status }}</span>
-    <button (click)="updateFunctionality(functionality)">Edytuj</button>
-    <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
+    <button (click)="updateFunctionality(functionality)" class="edit">Edytuj</button>
+    <button (click)="deleteFunctionality(functionality.id)" class="delete">Usuń</button>
   </li>
 </ul>
 
