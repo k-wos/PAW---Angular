@@ -28,14 +28,14 @@ export class FunctionalityListComponent implements OnInit {
   addFunctionality(functionality: Functionality): void {
     this.functionalityService.addFunctionality(functionality)
       .subscribe(() => {
-        this.getFunctionalities(); // Aktualizacja listy funkcjonalności po dodaniu
+        this.getFunctionalities();
       });
   }
 
   updateFunctionality(functionality: Functionality): void {
     this.functionalityService.updateFunctionality(functionality)
       .subscribe(() => {
-        this.getFunctionalities(); // Aktualizacja listy funkcjonalności po edycji
+        this.getFunctionalities();
       });
   }
 

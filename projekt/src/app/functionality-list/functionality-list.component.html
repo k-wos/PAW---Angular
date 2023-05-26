@@ -1,6 +1,5 @@
 <h2>Lista funkcjonalności</h2>
 
-<!-- Wyświetlanie listy funkcjonalności -->
 <ul>
   <li *ngFor="let functionality of functionalities">
     <span>{{ functionality.name }}</span> -
@@ -14,7 +13,6 @@
   </li>
 </ul>
 
-<!-- Formularz dodawania nowej funkcjonalności -->
 <form (submit)="addFunctionality(newFunctionality)">
   <h3>Dodaj nową funkcjonalność</h3>
   <label>
@@ -76,7 +74,6 @@
   <button type="submit">Dodaj</button>
 </form>
 
-<!-- Formularz edycji funkcjonalności -->
 <form
   *ngIf="selectedFunctionality"
   (submit)="updateFunctionality(selectedFunctionality)"
