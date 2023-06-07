@@ -1,15 +1,26 @@
 <h2>Lista funkcjonalności</h2>
 
-<ul>
+<ul class="functionality-list">
+  <li class="list-header">
+    <span>Nazwa</span>
+    <span>Opis</span>
+    <span>Priorytet</span>
+    <span>Projekt</span>
+    <span>Właściciel</span>
+    <span>Stan</span>
+    <span>Akcje</span>
+  </li>
   <li *ngFor="let functionality of functionalities">
-    <span>{{ functionality.name }}</span> -
+    <span class="functionality-name">{{ functionality.name }}</span>
     <span>{{ functionality.description }}</span>
-    <span>{{ functionality.priority }}</span> -
+    <span>{{ functionality.priority }}</span>
     <span>{{ functionality.project }}</span>
-    <span>{{ functionality.owner }}</span> -
+    <span>{{ functionality.owner }}</span>
     <span>{{ functionality.status }}</span>
-    <button (click)="updateFunctionality(functionality)">Edytuj</button>
-    <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
+    <span>
+      <button (click)="updateFunctionality(functionality)">Edytuj</button>
+      <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
+    </span>
   </li>
 </ul>
 

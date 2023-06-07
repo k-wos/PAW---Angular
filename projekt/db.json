@@ -40,9 +40,9 @@
       "name": "a",
       "description": "a",
       "priority": "a",
-      "project": "c",
+      "project": "a",
       "owner": "a",
-      "status": "doing",
+      "status": "todo",
       "id": 5
     }
   ]

@@ -1,0 +1,27 @@
+.functionality-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.functionality-name {
+  grid-row: span 2;
+}
+
+li {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 5px 10px;
+}

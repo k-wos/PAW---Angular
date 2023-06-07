@@ -9,6 +9,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { FunctionalityListComponent } from './functionality-list/functionality-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EditFunctionalityComponent } from './edit-functionality/edit-functionality.component';
 
 @NgModule({
   declarations: [	
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
       HeaderComponent,
       AsideNavComponent,
       ProjectListComponent,
-      FunctionalityListComponent
+      FunctionalityListComponent,
+      EditFunctionalityComponent
    ],
   imports: [
     BrowserModule,
