@@ -10,6 +10,7 @@ import { FunctionalityListComponent } from './functionality-list/functionality-l
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditFunctionalityComponent } from './edit-functionality/edit-functionality.component';
+import { AddFuncionalityComponent } from './add-funcionality/add-funcionality.component';
 
 @NgModule({
   declarations: [	
@@ -19,7 +20,8 @@ import { EditFunctionalityComponent } from './edit-functionality/edit-functional
       AsideNavComponent,
       ProjectListComponent,
       FunctionalityListComponent,
-      EditFunctionalityComponent
+      EditFunctionalityComponent,
+      AddFuncionalityComponent
    ],
   imports: [
     BrowserModule,

@@ -1,4 +1,9 @@
 <main>
   <app-aside-nav></app-aside-nav>
-  <section><app-functionality-list></app-functionality-list></section>
+  <section>
+    <app-add-funcionality
+      [refreshFunctionalities]="getFunctionalities"
+    ></app-add-funcionality>
+    <app-functionality-list></app-functionality-list>
+  </section>
 </main>

@@ -1,0 +1,60 @@
+<form (submit)="addFunctionality()">
+  <h3>Dodaj nową funkcjonalność</h3>
+  <label>
+    Nazwa:
+    <input
+      type="text"
+      name="functionalityName"
+      [(ngModel)]="newFunctionality.name"
+    />
+  </label>
+  <label>
+    Opis:
+    <input
+      type="text"
+      name="functionalityDescription"
+      [(ngModel)]="newFunctionality.description"
+      required
+    />
+  </label>
+  <label>
+    Priorytet:
+    <input
+      type="text"
+      name="functionalityPriority"
+      [(ngModel)]="newFunctionality.priority"
+      required
+    />
+  </label>
+  <label>
+    Projekt:
+    <input
+      type="text"
+      name="functionalityProject"
+      [(ngModel)]="newFunctionality.project"
+      required
+    />
+  </label>
+  <label>
+    Właściciel:
+    <input
+      type="text"
+      name="functionalityOwner"
+      [(ngModel)]="newFunctionality.owner"
+      required
+    />
+  </label>
+  <label>
+    Stan:
+    <select
+      name="functionalityState"
+      [(ngModel)]="newFunctionality.status"
+      required
+    >
+      <option value="todo">Do zrobienia</option>
+      <option value="doing">W trakcie</option>
+      <option value="done">Gotowe</option>
+    </select>
+  </label>
+  <button type="submit">Dodaj</button>
+</form>

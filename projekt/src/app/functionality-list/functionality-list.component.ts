@@ -25,12 +25,7 @@ export class FunctionalityListComponent implements OnInit {
       });
   }
 
-  addFunctionality(functionality: Functionality): void {
-    this.functionalityService.addFunctionality(functionality)
-      .subscribe(() => {
-        this.getFunctionalities();
-      });
-  }
+  
 
   updateFunctionality(functionality: Functionality): void {
     this.functionalityService.updateFunctionality(functionality)
