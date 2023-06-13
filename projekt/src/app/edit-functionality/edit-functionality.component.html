@@ -1,1 +1,32 @@
-<p>edit-functionality works!</p>
+<form (submit)="onSave()">
+  <h3>Edytuj funkcjonalność</h3>
+  <input type="text" [(ngModel)]="functionality.name" name="name" required />
+  <input
+    type="text"
+    [(ngModel)]="functionality.description"
+    name="description"
+    required
+  />
+  <input
+    type="text"
+    [(ngModel)]="functionality.priority"
+    name="priority"
+    required
+  />
+  <input
+    type="text"
+    [(ngModel)]="functionality.project"
+    name="project"
+    required
+  />
+  <input type="text" [(ngModel)]="functionality.owner" name="owner" required />
+  <select [(ngModel)]="functionality.status" name="status" required>
+    <option value="todo">Do zrobienia</option>
+    <option value="doing">W trakcie</option>
+    <option value="done">Gotowe</option>
+  </select>
+
+  <button type="button" (click)="onSave()">Zapisz</button>
+
+  <button type="button" (click)="onCancel()">Anuluj</button>
+</form>

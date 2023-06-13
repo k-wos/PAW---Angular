@@ -18,48 +18,15 @@
     <span>{{ functionality.owner }}</span>
     <span>{{ functionality.status }}</span>
     <span>
-      <button (click)="updateFunctionality(functionality)">Edytuj</button>
+      <button (click)="editFunctionality(functionality)">Edytuj</button>
       <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
     </span>
   </li>
 </ul>
 
-<form
+<app-edit-functionality
   *ngIf="selectedFunctionality"
-  (submit)="updateFunctionality(selectedFunctionality)"
->
-  <h3>Edytuj funkcjonalność</h3>
-  <label>
-    Nazwa:
-    <input type="text" [(ngModel)]="selectedFunctionality.name" required />
-  </label>
-  <label>
-    Opis:
-    <input
-      type="text"
-      [(ngModel)]="selectedFunctionality.description"
-      required
-    />
-  </label>
-  <label>
-    Priorytet:
-    <input type="text" [(ngModel)]="selectedFunctionality.priority" required />
-  </label>
-  <label>
-    Projekt:
-    <input type="text" [(ngModel)]="selectedFunctionality.project" required />
-  </label>
-  <label>
-    Właściciel:
-    <input type="text" [(ngModel)]="selectedFunctionality.owner" required />
-  </label>
-  <label>
-    Stan:
-    <select [(ngModel)]="selectedFunctionality.status" required>
-      <option value="todo">Do zrobienia</option>
-      <option value="doing">W trakcie</option>
-      <option value="done">Gotowe</option>
-    </select>
-  </label>
-  <button type="submit">Zapisz</button>
-</form>
+  [functionality]="selectedFunctionality"
+  (saveFunctionality)="updateFunctionality($event)"
+  (closeForm)="closeEditForm()"
+></app-edit-functionality>

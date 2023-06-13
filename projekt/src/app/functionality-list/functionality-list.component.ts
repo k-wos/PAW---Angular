@@ -10,6 +10,7 @@ import { FunctionalityService } from '../services/Functionality.service';
 export class FunctionalityListComponent implements OnInit {
   functionalities: Functionality[] = [];
   selectedFunctionality: Functionality | null = null;
+
   newFunctionality: Functionality = new Functionality();
 
   constructor(private functionalityService: FunctionalityService) { }
@@ -25,14 +26,22 @@ export class FunctionalityListComponent implements OnInit {
       });
   }
 
-  
+  addFunctionality(functionality: Functionality): void {
+    this.functionalityService.addFunctionality(functionality)
+      .subscribe(() => {
+        this.getFunctionalities();
+        this.newFunctionality = new Functionality(); // Reset the newFunctionality object
+      });
+  }
 
   updateFunctionality(functionality: Functionality): void {
     this.functionalityService.updateFunctionality(functionality)
       .subscribe(() => {
         this.getFunctionalities();
+        this.selectedFunctionality = null; // Reset the selectedFunctionality object
       });
   }
+  
 
   deleteFunctionality(functionalityId: number | undefined): void {
     if (functionalityId !== undefined) {
@@ -45,5 +54,13 @@ export class FunctionalityListComponent implements OnInit {
         }
       );
     }
+  }
+
+  editFunctionality(functionality: Functionality): void {
+    this.selectedFunctionality = functionality; // Set the selectedFunctionality object
+  }
+
+  closeEditForm(): void {
+    this.selectedFunctionality = null; // Reset the selectedFunctionality object when the form is closed
   }
 }
