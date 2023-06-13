@@ -1,0 +1,23 @@
+<div class="kanban-container">
+  <div class="kanban-column" *ngFor="let column of kanbanColumns">
+    <h2>{{ column.status }}</h2>
+    <div class="task-list">
+      <div class="task" *ngFor="let task of column.tasks">
+        <h3>{{ task.name }}</h3>
+        <p>{{ task.description }}</p>
+        <button
+          (click)="moveTask(task, column.status, 'previous')"
+          *ngIf="column.status !== 'todo'"
+        >
+          Move Previous
+        </button>
+        <button
+          (click)="moveTask(task, column.status, 'next')"
+          *ngIf="column.status !== 'done'"
+        >
+          Move Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

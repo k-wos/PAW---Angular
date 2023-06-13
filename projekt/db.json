@@ -67,9 +67,18 @@
       "description": "zaa",
       "priority": 1,
       "functionalityId": 3,
-      "status": "todo",
+      "status": "done",
       "createdDate": "14.06.2023, 00:26:42",
-      "id": 1
+      "id": 1,
+      "functionality": {
+        "id": 3,
+        "name": "Funkcjonalność 3",
+        "description": "Opis funkcjonalności 3",
+        "priority": "Wysoki",
+        "project": "Projekt 3",
+        "owner": "Właściciel 3",
+        "status": "done"
+      }
     }
   ]
 }

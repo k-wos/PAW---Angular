@@ -40,11 +40,44 @@ export class KanbanComponent {
     console.log();
     return kanbanColumns;
   }
-  moveTask(task: Task, targetStatus: string): void {
-    task.status = targetStatus;
-    this.taskService.updateTask(task).subscribe(() => {
-      console.log('Zadanie zostało przeniesione');
-      this.taskService.getTasks();
-    });
+  moveTask(task: Task, currentStatus: string, direction: 'previous' | 'next'): void {
+    const currentIndex = this.kanbanColumns.findIndex(column => column.status === currentStatus);
+    let targetIndex: number | undefined;
+  
+    if (direction === 'previous') {
+      targetIndex = currentIndex - 1;
+    } else if (direction === 'next') {
+      targetIndex = currentIndex + 1;
+    }
+  
+    if (targetIndex !== undefined && targetIndex >= 0 && targetIndex < this.kanbanColumns.length) {
+      const targetColumn = this.kanbanColumns[targetIndex];
+      const taskIndex = targetColumn.tasks.findIndex(t => t.id === task.id);
+  
+      if (taskIndex === -1) {
+        
+        const currentColumn = this.kanbanColumns[currentIndex];
+        const taskIndexInCurrentColumn = currentColumn.tasks.findIndex(t => t.id === task.id);
+        currentColumn.tasks.splice(taskIndexInCurrentColumn, 1);
+  
+        
+        task.status = targetColumn.status;
+  
+        
+        targetColumn.tasks.push(task);
+  
+        
+        this.taskService.updateTask(task).subscribe(() => {
+          console.log('Task updated successfully');
+        }, error => {
+          console.error('Error updating task:', error);
+          
+          currentColumn.tasks.splice(taskIndexInCurrentColumn, 0, task);
+          task.status = currentColumn.status;
+          targetColumn.tasks.splice(taskIndex, 1);
+        });
+      }
+    }
   }
+  
 }
