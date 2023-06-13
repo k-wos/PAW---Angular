@@ -37,22 +37,29 @@
       "id": 4
     },
     {
-      "name": "a",
+      "name": "aaa",
       "description": "a",
       "priority": "a",
       "project": "a",
       "owner": "a",
       "status": "todo",
       "id": 5
-    },
-    {
-      "id": 6,
-      "name": "asaas"
-    },
-    {
-      "id": 7,
-      "name": "das"
     }
   ],
-  "tasks": []
+ 
+  "users": [
+    {
+      "login": "johndoe",
+      "password": "password123",
+      "firstName": "John",
+      "lastName": "Doe",
+      "permissions": "developer"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Przykładowy projekt",
+      "description": "Opis przykładowego projektu"
+    }
+  ]
 }

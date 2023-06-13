@@ -21,7 +21,9 @@ export class BoardComponent {
         this.functionalities = data;
       });
   }
+ 
 
+ 
 
   
 }

@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditFunctionalityComponent } from './edit-functionality/edit-functionality.component';
 import { AddFuncionalityComponent } from './add-funcionality/add-funcionality.component';
+import { AppRoutingModule } from './app-routing.module';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [	
@@ -21,11 +23,13 @@ import { AddFuncionalityComponent } from './add-funcionality/add-funcionality.co
       ProjectListComponent,
       FunctionalityListComponent,
       EditFunctionalityComponent,
-      AddFuncionalityComponent
+      AddFuncionalityComponent,
+      TasksComponent
    ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,  
     FormsModule,
   ],
   providers: [],
