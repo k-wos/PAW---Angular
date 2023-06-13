@@ -14,6 +14,7 @@ import { AddFuncionalityComponent } from './add-funcionality/add-funcionality.co
 import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './tasks/tasks.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { KanbanComponent } from './kanban/kanban.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
       AddFuncionalityComponent,
       TasksComponent,
       AddTaskComponent,
+      KanbanComponent,
       
    ],
   imports: [

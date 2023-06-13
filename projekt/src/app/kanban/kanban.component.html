@@ -1,0 +1,13 @@
+<div class="kanban-container">
+  <div class="kanban-column" *ngFor="let column of kanbanColumns">
+    <h2>{{ column.status }}</h2>
+    <div class="task-list">
+      <div class="task" *ngFor="let task of column.tasks">
+        <p>{{ task.name }}</p>
+        <p>{{ task.description }}</p>
+
+        <!-- Wyświetl pozostałe informacje o zadaniu -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@ export class Task {
     functionality?: Functionality;
     estimatedTime?: Date;
     status?: string;
-    createdDate?: Date;
+    createdDate?: string;
     startDate?: Date;
     endDate?: Date;
     assignedUser?: string;
