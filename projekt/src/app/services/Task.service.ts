@@ -36,12 +36,15 @@ private getFunctionality(id: number): Observable<Functionality> {
   return this.http.get<Functionality>(url);
 }
 
+
 getTask(id: number): Observable<Task> {
   const url = `${this.baseUrl}/${id}`;
   return this.http.get<Task>(url);
 }
 
 addTask(task: Task): Observable<any> {
+  task.status = 'todo';
+  task.createdDate = new Date();
   return this.http.post(this.baseUrl, task);
 }
 
