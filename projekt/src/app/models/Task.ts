@@ -1,13 +1,16 @@
+import { Functionality } from "./Functionality";
+
 export class Task {
     id?: number;
     name?: string;
-    desription?: string;
+    description?: string;
     priority?: number;
     functionalityId?: number;
+    functionality?: Functionality;
     estimatedTime?: Date;
     status?: string;
     createdDate?: Date;
     startDate?: Date;
     endDate?: Date;
-    assignedUSer?: string;
+    assignedUser?: string;
 }

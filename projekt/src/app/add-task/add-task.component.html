@@ -1,0 +1,88 @@
+<form (submit)="addTask()">
+  <div class="form-group">
+    <label for="name">Nazwa:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="newTask.name"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Opis:</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="newTask.description"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="priority">Priorytet:</label>
+    <input
+      type="number"
+      id="priority"
+      name="priority"
+      [(ngModel)]="newTask.priority"
+    />
+  </div>
+  <div class="form-group">
+    <label for="functionalityId">Id funkcjonalności:</label>
+    <input
+      type="number"
+      id="functionalityId"
+      name="functionalityId"
+      [(ngModel)]="newTask.functionalityId"
+    />
+  </div>
+  <div class="form-group">
+    <label for="estimatedTime">Przewidywany czas wykonania:</label>
+    <input
+      type="date"
+      id="estimatedTime"
+      name="estimatedTime"
+      [(ngModel)]="newTask.estimatedTime"
+    />
+  </div>
+  <div class="form-group">
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status" [(ngModel)]="newTask.status" />
+  </div>
+  <div class="form-group">
+    <label for="createdDate">Data dodania:</label>
+    <input
+      type="date"
+      id="createdDate"
+      name="createdDate"
+      [(ngModel)]="newTask.createdDate"
+    />
+  </div>
+  <div class="form-group">
+    <label for="startDate">Data startu:</label>
+    <input
+      type="date"
+      id="startDate"
+      name="startDate"
+      [(ngModel)]="newTask.startDate"
+    />
+  </div>
+  <div class="form-group">
+    <label for="endDate">Data zakończenia:</label>
+    <input
+      type="date"
+      id="endDate"
+      name="endDate"
+      [(ngModel)]="newTask.endDate"
+    />
+  </div>
+  <div class="form-group">
+    <label for="assignedUser">Przypisany użytkownik:</label>
+    <input
+      type="text"
+      id="assignedUser"
+      name="assignedUser"
+      [(ngModel)]="newTask.assignedUser"
+    />
+  </div>
+  <button type="submit">Dodaj zadanie</button>
+</form>

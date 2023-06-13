@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Task } from '../models/Task';
+import { TaskService } from '../services/Task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent {
+  tasks: Task[] = [];
 
+  constructor(private taskService: TaskService) { }
+
+  ngOnInit(): void {
+    this.getTasks();
+  }
+
+  getTasks(): void {
+    this.taskService.getTasks().subscribe(tasks => {
+      this.tasks = tasks;
+    });
+  }
 }

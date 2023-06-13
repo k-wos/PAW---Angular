@@ -1,1 +1,33 @@
-<p>tasks works!</p>
+<app-add-task></app-add-task>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th>Opis</th>
+    <th>Priorytet</th>
+    <th>Funkcjonalność</th>
+    <th>Przewidywany czas wykonania</th>
+    <th>Stan</th>
+    <th>Data dodania</th>
+    <th>Data startu</th>
+    <th>Data zakończenia</th>
+    <th>Użytkownik odpowiedzialny</th>
+    <th>Akcje</th>
+  </tr>
+  <tr *ngFor="let task of tasks">
+    <td>{{ task.name }}</td>
+    <td>{{ task.description }}</td>
+    <td>{{ task.priority }}</td>
+    <td>{{ task.functionality?.name }}</td>
+    <!-- Wyświetl nazwę funkcjonalności -->
+    <td>{{ task.estimatedTime }}</td>
+    <td>{{ task.status }}</td>
+    <td>{{ task.createdDate }}</td>
+    <td>{{ task.startDate }}</td>
+    <td>{{ task.endDate }}</td>
+    <td>{{ task.assignedUser }}</td>
+    <td>
+      <button>Edytuj</button>
+      <button>Usuń</button>
+    </td>
+  </tr>
+</table>

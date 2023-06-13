@@ -8,11 +8,13 @@ import { AsideNavComponent } from './aside-nav/aside-nav.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { FunctionalityListComponent } from './functionality-list/functionality-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditFunctionalityComponent } from './edit-functionality/edit-functionality.component';
 import { AddFuncionalityComponent } from './add-funcionality/add-funcionality.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './tasks/tasks.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+
 
 @NgModule({
   declarations: [	
@@ -24,13 +26,16 @@ import { TasksComponent } from './tasks/tasks.component';
       FunctionalityListComponent,
       EditFunctionalityComponent,
       AddFuncionalityComponent,
-      TasksComponent
+      TasksComponent,
+      AddTaskComponent,
+      
    ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,  
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

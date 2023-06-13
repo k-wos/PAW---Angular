@@ -46,7 +46,6 @@
       "id": 5
     }
   ],
- 
   "users": [
     {
       "login": "johndoe",
@@ -60,6 +59,35 @@
     {
       "name": "Przykładowy projekt",
       "description": "Opis przykładowego projektu"
+    }
+  ],
+  "tasks": [
+    {
+      "functionalityId": 0,
+      "name": "fdas",
+      "id": 1
+    },
+    {
+      "name": "gdsgd",
+      "id": 2
+    },
+    {
+      "name": "dsadas",
+      "description": "dsadas",
+      "priority": 1,
+      "functionalityId": 2,
+      "estimatedTime": "2023-06-16",
+      "status": "aa",
+      "id": 3
+    },
+    {
+      "functionalityId": 2,
+      "id": 4
+    },
+    {
+      "name": "1",
+      "functionalityId": 1,
+      "id": 5
     }
   ]
 }
