@@ -27,7 +27,7 @@
     <td>{{ task.assignedUser }}</td>
     <td>
       <button>Edytuj</button>
-      <button>Usuń</button>
+      <button (click)="deleteTask(task.id)">Usuń</button>
     </td>
   </tr>
 </table>

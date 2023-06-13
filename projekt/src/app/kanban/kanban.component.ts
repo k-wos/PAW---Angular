@@ -40,4 +40,11 @@ export class KanbanComponent {
     console.log();
     return kanbanColumns;
   }
+  moveTask(task: Task, targetStatus: string): void {
+    task.status = targetStatus;
+    this.taskService.updateTask(task).subscribe(() => {
+      console.log('Zadanie zostało przeniesione');
+      this.taskService.getTasks();
+    });
+  }
 }

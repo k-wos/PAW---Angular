@@ -21,4 +21,14 @@ export class TasksComponent {
       this.tasks = tasks;
     });
   }
+  deleteTask(id: number | undefined): void {
+    if (id !== undefined) {
+    this.taskService.deleteTask(id).subscribe(() => {
+     
+      console.log('Zadanie zostało usunięte');
+      
+      this.getTasks();
+    })
+  }
+}
 }

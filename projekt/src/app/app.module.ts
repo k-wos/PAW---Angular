@@ -17,6 +17,8 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { KanbanComponent } from './kanban/kanban.component';
 
 
+
+
 @NgModule({
   declarations: [	
     AppComponent,
