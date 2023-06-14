@@ -3,7 +3,6 @@
   <table>
     <tr>
       <th>Nazwa</th>
-      <th>Opis</th>
       <th>Priorytet</th>
       <th>Funkcjonalność</th>
       <th>Przewidywany czas wykonania</th>
@@ -16,7 +15,6 @@
     </tr>
     <tr *ngFor="let task of tasks">
       <td>{{ task.name }}</td>
-      <td>{{ task.description }}</td>
       <td>{{ task.priority }}</td>
       <td>{{ task.functionality?.name }}</td>
       <td>{{ task.estimatedTime }}</td>
@@ -26,7 +24,7 @@
       <td>{{ task.endDate }}</td>
       <td>{{ task.assignedUser }}</td>
       <td>
-        <button (click)="showDetails()">Szczegóły</button>
+        <button (click)="showDetails(task)">Szczegóły</button>
         <button>Edytuj</button>
         <button (click)="deleteTask(task.id)">Usuń</button>
       </td>

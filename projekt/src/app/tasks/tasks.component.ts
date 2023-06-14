@@ -34,9 +34,10 @@ export class TasksComponent {
     })
   }
 }
-showDetails(): void {
+showDetails(task: Task): void {
   const dialogRef = this.dialog.open(TaskDetailsComponent, {
     width: '400px',
+    data: task,
   });
   dialogRef.afterClosed().subscribe(result => {
     console.log('Dialog został zamknięty');

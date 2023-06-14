@@ -41,6 +41,12 @@
           "functionalityId": 2,
           "status": "todo",
           "createdDate": "14.06.2023, 20:01:02"
+        },
+        {
+          "name": "fsdf",
+          "functionalityId": 2,
+          "status": "todo",
+          "createdDate": "14.06.2023, 22:30:40"
         }
       ]
     },
@@ -51,7 +57,16 @@
       "priority": "Wysoki",
       "project": "Projekt 3",
       "owner": "Właściciel 3",
-      "status": "done"
+      "status": "done",
+      "tasks": [
+        {
+          "name": "asdas",
+          "description": "dsadas",
+          "functionalityId": 3,
+          "status": "todo",
+          "createdDate": "14.06.2023, 22:29:55"
+        }
+      ]
     }
   ],
   "users": [
@@ -73,7 +88,7 @@
     {
       "name": "dasda",
       "functionalityId": 1,
-      "status": "doing",
+      "status": "done",
       "createdDate": "14.06.2023, 16:42:06",
       "id": 1,
       "functionality": {
@@ -97,7 +112,7 @@
     {
       "name": "awaaw",
       "functionalityId": 1,
-      "status": "todo",
+      "status": "doing",
       "createdDate": "14.06.2023, 19:34:46",
       "id": 5,
       "functionality": {
@@ -121,7 +136,7 @@
     {
       "name": "angileki",
       "functionalityId": 2,
-      "status": "doing",
+      "status": "done",
       "createdDate": "14.06.2023, 20:01:02",
       "id": 7,
       "functionality": {
@@ -148,9 +163,21 @@
             "functionalityId": 2,
             "status": "todo",
             "createdDate": "14.06.2023, 20:01:02"
+          },
+          {
+            "name": "fsdf",
+            "functionalityId": 2,
+            "status": "todo",
+            "createdDate": "14.06.2023, 22:30:40"
           }
         ]
       }
+    },
+    {
+      "status": "doing",
+      "createdDate": "14.06.2023, 22:40:00",
+      "assignedUser": "John Doe",
+      "id": 8
     }
   ]
 }

@@ -3,8 +3,8 @@
     <h2>{{ column.status }}</h2>
     <div class="task-list">
       <div class="task" *ngFor="let task of column.tasks">
-        <h3>{{ task.name }}</h3>
-        <p>{{ task.description }}</p>
+        <h2>Nazwa: {{ task.name }}</h2>
+        <p>Opis: {{ task.description }}</p>
         <button
           (click)="moveTask(task, column.status, 'previous')"
           *ngIf="column.status !== 'todo'"

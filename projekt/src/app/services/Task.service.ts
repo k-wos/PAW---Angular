@@ -54,6 +54,7 @@ addTask(task: Task): Observable<any> {
   task.status = 'todo';
   const currentDate = new Date().toLocaleString();
   task.createdDate = currentDate;
+  task.assignedUser = "John Doe";
   const functionalityId = task.functionalityId || 0; 
 
   return this.http.post(this.baseUrl, task).pipe(
