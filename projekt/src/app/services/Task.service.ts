@@ -31,7 +31,7 @@ getTasks(): Observable<Task[]> {
   );
 }
 
-private getFunctionality(id: number): Observable<Functionality> {
+public getFunctionality(id: number): Observable<Functionality> {
   const url = `http://localhost:3000/functionalities/${id}`;
   return this.http.get<Functionality>(url);
 }

@@ -18,7 +18,6 @@ import { KanbanComponent } from './kanban/kanban.component';
 
 
 
-
 @NgModule({
   declarations: [	
     AppComponent,

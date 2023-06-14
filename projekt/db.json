@@ -73,7 +73,7 @@
     {
       "name": "dasda",
       "functionalityId": 1,
-      "status": "todo",
+      "status": "doing",
       "createdDate": "14.06.2023, 16:42:06",
       "id": 1,
       "functionality": {
@@ -85,18 +85,6 @@
         "owner": "Właściciel 1",
         "status": "todo"
       }
-    },
-    {
-      "name": "fadsfds",
-      "status": "todo",
-      "createdDate": "14.06.2023, 16:42:59",
-      "id": 2
-    },
-    {
-      "name": "dfdsfs",
-      "status": "done",
-      "createdDate": "14.06.2023, 16:43:03",
-      "id": 3
     }
   ]
 }
