@@ -1,4 +1,5 @@
 .functionality-list {
+  margin-top: 20px;
   list-style-type: none;
   padding: 0;
 }
@@ -7,21 +8,34 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.functionality-name {
-  grid-row: span 2;
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
 li {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.functionality-name {
+  font-weight: bold;
 }
 
 button {
   padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #999;
+  color: #fff;
 }

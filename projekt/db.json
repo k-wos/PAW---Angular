@@ -52,44 +52,6 @@
       "project": "Projekt 3",
       "owner": "Właściciel 3",
       "status": "done"
-    },
-    {
-      "name": "a",
-      "description": "a",
-      "priority": "a",
-      "project": "a",
-      "owner": "a",
-      "status": "doing",
-      "id": 4
-    },
-    {
-      "name": "aaa",
-      "description": "a",
-      "priority": "a",
-      "project": "a",
-      "owner": "a",
-      "status": "doing",
-      "id": 5
-    },
-    {
-      "name": "jhg",
-      "id": 6
-    },
-    {
-      "name": "fdsfdsg",
-      "id": 7
-    },
-    {
-      "name": "Discord",
-      "id": 8,
-      "tasks": [
-        {
-          "name": "DIscord",
-          "functionalityId": 8,
-          "status": "todo",
-          "createdDate": "14.06.2023, 20:02:18"
-        }
-      ]
     }
   ],
   "users": [
@@ -133,34 +95,28 @@
       }
     },
     {
-      "status": "todo",
-      "createdDate": "14.06.2023, 19:22:16",
-      "id": 2
-    },
-    {
-      "functionalityId": 2,
-      "status": "todo",
-      "createdDate": "14.06.2023, 19:34:16",
-      "id": 3
-    },
-    {
-      "name": "fdsfds",
-      "status": "todo",
-      "createdDate": "14.06.2023, 19:34:34",
-      "id": 4
-    },
-    {
       "name": "awaaw",
       "functionalityId": 1,
       "status": "todo",
       "createdDate": "14.06.2023, 19:34:46",
-      "id": 5
-    },
-    {
-      "functionalityId": 2,
-      "status": "todo",
-      "createdDate": "14.06.2023, 19:52:58",
-      "id": 6
+      "id": 5,
+      "functionality": {
+        "id": 1,
+        "name": "Funkcjonalność 1",
+        "description": "Opis funkcjonalności 1",
+        "priority": "Niski",
+        "project": "Projekt 1",
+        "owner": "Właściciel 1",
+        "status": "todo",
+        "tasks": [
+          {
+            "name": "awaaw",
+            "functionalityId": 1,
+            "status": "todo",
+            "createdDate": "14.06.2023, 19:34:46"
+          }
+        ]
+      }
     },
     {
       "name": "angileki",
@@ -195,13 +151,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "DIscord",
-      "functionalityId": 8,
-      "status": "todo",
-      "createdDate": "14.06.2023, 20:02:18",
-      "id": 8
     }
   ]
 }
