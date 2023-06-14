@@ -1,3 +1,5 @@
+import { Task } from "./Task";
+
 export class Functionality {
     id?: number;
     name?: string;
@@ -6,4 +8,5 @@ export class Functionality {
     project?: string;
     owner?: string;
     status?: string;
+    tasks?: Task[];
   }

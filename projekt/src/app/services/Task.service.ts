@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, forkJoin, map, of, switchMap } from 'rxjs';
+import { Observable, forkJoin, map, of, switchMap, throwError } from 'rxjs';
 import { Task } from '../models/Task';
 import { Functionality } from '../models/Functionality';
+import { FunctionalityService } from './Functionality.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { Functionality } from '../models/Functionality';
 export class TaskService {
   private baseUrl = 'http://localhost:3000/tasks';
 
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient, private functionalityService: FunctionalityService) { }
 
 getTasks(): Observable<Task[]> {
   return this.http.get<Task[]>(this.baseUrl).pipe(
@@ -42,11 +43,43 @@ getTask(id: number): Observable<Task> {
   return this.http.get<Task>(url);
 }
 
-addTask(task: Task): Observable<any> {
+/*addTask(task: Task): Observable<any> {
   task.status = 'todo';
   const currentDate = new Date().toLocaleString();
   task.createdDate = currentDate;
   return this.http.post(this.baseUrl, task);
+}*/
+
+addTask(task: Task): Observable<any> {
+  task.status = 'todo';
+  const currentDate = new Date().toLocaleString();
+  task.createdDate = currentDate;
+  const functionalityId = task.functionalityId || 0; 
+
+  return this.http.post(this.baseUrl, task).pipe(
+    switchMap((response: any) => {
+      
+      if (response && response.id) {
+        
+        return this.getFunctionality(functionalityId).pipe(
+          switchMap((functionality: Functionality) => {
+            
+            if (functionality && functionality.tasks) {
+              functionality.tasks.push(task);
+            } else {
+              functionality.tasks = [task];
+            }
+
+            
+            return this.functionalityService.updateFunctionality(functionality);
+          })
+        );
+      } else {
+        
+        return throwError('Nie udało się dodać zadania.');
+      }
+    })
+  );
 }
 
 updateTask(task: Task): Observable<any> {

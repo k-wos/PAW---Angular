@@ -9,6 +9,7 @@ import * as  json from  '../../../db.json'
 })
 export class FunctionalityService {
   private baseUrl = 'http://localhost:3000/functionalities';
+  private projectUrl = 'http://localhost:3000/projects'
 
   constructor(private http: HttpClient) { }
 
