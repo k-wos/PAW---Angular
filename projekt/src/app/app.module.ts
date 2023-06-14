@@ -15,7 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './tasks/tasks.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { KanbanComponent } from './kanban/kanban.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { TaskDetailsComponent } from './task-details/task-details.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { KanbanComponent } from './kanban/kanban.component';
       TasksComponent,
       AddTaskComponent,
       KanbanComponent,
+      TaskDetailsComponent,
+      
       
    ],
   imports: [
@@ -38,7 +42,9 @@ import { KanbanComponent } from './kanban/kanban.component';
     HttpClientModule,
     AppRoutingModule,  
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

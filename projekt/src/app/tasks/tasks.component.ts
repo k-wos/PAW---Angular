@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Task } from '../models/Task';
 import { TaskService } from '../services/Task.service';
+import { TaskDetailsComponent } from '../task-details/task-details.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-tasks',
@@ -10,7 +13,7 @@ import { TaskService } from '../services/Task.service';
 export class TasksComponent {
   tasks: Task[] = [];
 
-  constructor(private taskService: TaskService) { }
+  constructor(private taskService: TaskService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getTasks();
@@ -31,4 +34,13 @@ export class TasksComponent {
     })
   }
 }
+showDetails(): void {
+  const dialogRef = this.dialog.open(TaskDetailsComponent, {
+    width: '400px',
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('Dialog został zamknięty');
+  });
+}
+
 }
