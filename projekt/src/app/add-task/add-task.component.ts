@@ -16,7 +16,7 @@ export class AddTaskComponent {
     this.taskService.addTask(this.newTask)
       .subscribe(()=>{
         this.newTask = new Task();
-
+      this.taskService.getTasks();
       
       })
   }
