@@ -1,34 +1,36 @@
 <app-add-funcionality></app-add-funcionality>
-<h2>Lista funkcjonalności</h2>
+<div class="list">
+  <h2>Lista funkcjonalności</h2>
 
-<ul class="functionality-list">
-  <li class="list-header">
-    <span>Nazwa</span>
-    <span>Opis</span>
-    <span>Priorytet</span>
-    <span>Projekt</span>
-    <span>Właściciel</span>
-    <span>Stan</span>
-    <span>Akcje</span>
-  </li>
-  <li *ngFor="let functionality of functionalities">
-    <span class="functionality-name">{{ functionality.name }}</span>
-    <span>{{ functionality.description }}</span>
-    <span>{{ functionality.priority }}</span>
-    <span>{{ functionality.project }}</span>
-    <span>{{ functionality.owner }}</span>
-    <span>{{ functionality.status }}</span>
-    <span>
-      <button>Szczegóły</button>
-      <button (click)="editFunctionality(functionality)">Edytuj</button>
-      <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
-    </span>
-  </li>
-</ul>
+  <ul class="functionality-list">
+    <li class="list-header">
+      <span>Nazwa</span>
+      <span>Opis</span>
+      <span>Priorytet</span>
+      <span>Projekt</span>
+      <span>Właściciel</span>
+      <span>Stan</span>
+      <span>Akcje</span>
+    </li>
+    <li *ngFor="let functionality of functionalities">
+      <span class="functionality-name">{{ functionality.name }}</span>
+      <span>{{ functionality.description }}</span>
+      <span>{{ functionality.priority }}</span>
+      <span>{{ functionality.project }}</span>
+      <span>{{ functionality.owner }}</span>
+      <span>{{ functionality.status }}</span>
+      <span>
+        <button>Szczegóły</button>
+        <button (click)="editFunctionality(functionality)">Edytuj</button>
+        <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
+      </span>
+    </li>
+  </ul>
 
-<app-edit-functionality
-  *ngIf="selectedFunctionality"
-  [functionality]="selectedFunctionality"
-  (saveFunctionality)="updateFunctionality($event)"
-  (closeForm)="closeEditForm()"
-></app-edit-functionality>
+  <app-edit-functionality
+    *ngIf="selectedFunctionality"
+    [functionality]="selectedFunctionality"
+    (saveFunctionality)="updateFunctionality($event)"
+    (closeForm)="closeEditForm()"
+  ></app-edit-functionality>
+</div>
