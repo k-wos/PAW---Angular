@@ -33,7 +33,7 @@ export class FunctionalityListComponent implements OnInit {
     this.functionalityService.addFunctionality(functionality)
       .subscribe(() => {
         this.getFunctionalities();
-        this.newFunctionality = new Functionality(); // Reset the newFunctionality object
+        this.newFunctionality = new Functionality(); 
       });
   }
 
@@ -41,7 +41,7 @@ export class FunctionalityListComponent implements OnInit {
     this.functionalityService.updateFunctionality(functionality)
       .subscribe(() => {
         this.getFunctionalities();
-        this.selectedFunctionality = null; // Reset the selectedFunctionality object
+        this.selectedFunctionality = null; 
       });
   }
   
@@ -60,12 +60,12 @@ export class FunctionalityListComponent implements OnInit {
   }
 
   editFunctionality(functionality: Functionality): void {
-    this.selectedFunctionality = functionality; // Set the selectedFunctionality object
+    this.selectedFunctionality = functionality; 
   }
 
   closeEditForm(): void {
     location.reload();
-    this.selectedFunctionality = null; // Reset the selectedFunctionality object when the form is closed
+    this.selectedFunctionality = null; 
   }
 
   showDetails(functionality: Functionality): void {

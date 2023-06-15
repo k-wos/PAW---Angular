@@ -17,12 +17,12 @@ export class EditFunctionalityComponent {
   onSave(): void {
     this.functionalityService.updateFunctionality(this.functionality)
       .subscribe((updatedFunctionality: Functionality) => {
-        this.saveFunctionality.emit(updatedFunctionality); // Emit the updated functionality to the parent component
-        this.closeForm.emit(); // Emit an event to close the form
+        this.saveFunctionality.emit(updatedFunctionality); 
+        this.closeForm.emit(); 
       });
   }
 
   onCancel(): void {
-    this.closeForm.emit(); // Emit an event to close the form without saving
+    this.closeForm.emit(); 
   }
 }
