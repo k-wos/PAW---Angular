@@ -61,20 +61,25 @@ addTask(task: Task): Observable<any> {
         return this.getFunctionality(functionalityId).pipe(
           switchMap((functionality: Functionality) => {
             if (functionality && functionality.tasks) {
-              task.id = taskId; // Set the task id
+              
+              task.id = taskId; 
               functionality.tasks.push(task);
             } else {
               functionality.tasks = [{ ...task, id: taskId }]; 
             }
-            
+            location.reload();
             return this.functionalityService.updateFunctionality(functionality);
-          })
+            
+          }),
+          
         );
+        
       } else {
         return throwError('Nie udało się dodać zadania.');
       }
     })
   );
+  
 }
 
 updateTask(task: Task): Observable<any> {

@@ -24,7 +24,7 @@
         {
           "name": "xzad3",
           "functionalityId": 1,
-          "status": "todo",
+          "status": "done",
           "createdDate": "15.06.2023, 20:56:27",
           "assignedUser": "John Doe",
           "id": 3
@@ -65,7 +65,15 @@
       "owner": "John Doe",
       "status": "todo",
       "project": "Przykładowy projekt",
-      "id": 4
+      "id": 4,
+      "tasks": []
+    },
+    {
+      "name": "fsa",
+      "status": "todo",
+      "owner": "John Doe",
+      "project": "Przykładowy projekt",
+      "id": 5
     }
   ],
   "users": [
@@ -150,10 +158,41 @@
     {
       "name": "xzad3",
       "functionalityId": 1,
-      "status": "todo",
+      "status": "done",
       "createdDate": "15.06.2023, 20:56:27",
       "assignedUser": "John Doe",
-      "id": 3
+      "id": 3,
+      "functionality": {
+        "name": "Funcjonalnosc 1",
+        "priority": "Niski",
+        "status": "doing",
+        "owner": "John Doe",
+        "project": "Przykładowy projekt",
+        "id": 1,
+        "tasks": [
+          {
+            "name": "Zad1",
+            "description": "Opis zad 1",
+            "priority": 2,
+            "functionalityId": 1,
+            "estimatedTime": "2023-06-30",
+            "startDate": "2023-06-23",
+            "endDate": "2023-06-27",
+            "status": "doing",
+            "createdDate": "15.06.2023, 20:42:54",
+            "assignedUser": "John Doe",
+            "id": 1
+          },
+          {
+            "name": "xzad3",
+            "functionalityId": 1,
+            "status": "todo",
+            "createdDate": "15.06.2023, 20:56:27",
+            "assignedUser": "John Doe",
+            "id": 3
+          }
+        ]
+      }
     }
   ]
 }
