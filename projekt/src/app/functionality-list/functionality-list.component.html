@@ -4,8 +4,8 @@
 
   <ul class="functionality-list">
     <li class="list-header">
+      <span>Id</span>
       <span>Nazwa</span>
-      <span>Opis</span>
       <span>Priorytet</span>
       <span>Projekt</span>
       <span>Właściciel</span>
@@ -13,8 +13,8 @@
       <span>Akcje</span>
     </li>
     <li *ngFor="let functionality of functionalities">
+      <span>{{ functionality.id }}</span>
       <span class="functionality-name">{{ functionality.name }}</span>
-      <span>{{ functionality.description }}</span>
       <span>{{ functionality.priority }}</span>
       <span>{{ functionality.project }}</span>
       <span>{{ functionality.owner }}</span>

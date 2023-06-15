@@ -67,6 +67,11 @@
           "createdDate": "14.06.2023, 22:29:55"
         }
       ]
+    },
+    {
+      "name": "dsadsa",
+      "status": "todo",
+      "id": 4
     }
   ],
   "users": [
@@ -112,7 +117,7 @@
     {
       "name": "awaaw",
       "functionalityId": 1,
-      "status": "doing",
+      "status": "todo",
       "createdDate": "14.06.2023, 19:34:46",
       "id": 5,
       "functionality": {
@@ -174,8 +179,8 @@
       }
     },
     {
-      "status": "doing",
-      "createdDate": "14.06.2023, 22:40:00",
+      "status": "todo",
+      "createdDate": "15.06.2023, 16:53:45",
       "assignedUser": "John Doe",
       "id": 8
     }

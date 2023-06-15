@@ -1,5 +1,6 @@
 <form (submit)="addFunctionality()">
   <h2>Dodaj nową funkcjonalność</h2>
+
   <label>
     Nazwa:
     <input
@@ -44,17 +45,6 @@
       required
     />
   </label>
-  <label>
-    Stan:
-    <select
-      name="functionalityState"
-      [(ngModel)]="newFunctionality.status"
-      required
-    >
-      <option value="todo">Do zrobienia</option>
-      <option value="doing">W trakcie</option>
-      <option value="done">Gotowe</option>
-    </select>
-  </label>
+
   <button type="submit">Dodaj</button>
 </form>

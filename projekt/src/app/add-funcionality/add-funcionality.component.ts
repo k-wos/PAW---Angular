@@ -20,6 +20,7 @@ export class AddFuncionalityComponent {
       .subscribe(() => {
         this.newFunctionality = new Functionality();
         this.refreshFunctionalities();
+        
       });
   }
 }

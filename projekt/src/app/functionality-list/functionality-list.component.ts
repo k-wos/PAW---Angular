@@ -61,6 +61,7 @@ export class FunctionalityListComponent implements OnInit {
   }
 
   closeEditForm(): void {
+    location.reload();
     this.selectedFunctionality = null; // Reset the selectedFunctionality object when the form is closed
   }
 }

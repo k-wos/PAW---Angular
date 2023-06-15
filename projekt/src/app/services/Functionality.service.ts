@@ -18,6 +18,8 @@ export class FunctionalityService {
   }
 
   addFunctionality(functionality: Functionality): Observable<any> {
+    location.reload();
+    functionality.status = 'todo';
     return this.http.post(this.baseUrl, functionality);
   }
 

@@ -56,7 +56,7 @@ addTask(task: Task): Observable<any> {
   task.createdDate = currentDate;
   task.assignedUser = "John Doe";
   const functionalityId = task.functionalityId || 0; 
-
+  location.reload();
   return this.http.post(this.baseUrl, task).pipe(
     switchMap((response: any) => {
       
@@ -81,6 +81,7 @@ addTask(task: Task): Observable<any> {
       }
     })
   );
+  
 }
 
 updateTask(task: Task): Observable<any> {
