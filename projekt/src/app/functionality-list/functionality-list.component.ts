@@ -64,4 +64,8 @@ export class FunctionalityListComponent implements OnInit {
     location.reload();
     this.selectedFunctionality = null; // Reset the selectedFunctionality object when the form is closed
   }
+
+  showDetails(functionality: Functionality): void {
+    
+  }
 }
