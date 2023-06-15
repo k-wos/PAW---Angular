@@ -43,12 +43,7 @@ getTask(id: number): Observable<Task> {
   return this.http.get<Task>(url);
 }
 
-/*addTask(task: Task): Observable<any> {
-  task.status = 'todo';
-  const currentDate = new Date().toLocaleString();
-  task.createdDate = currentDate;
-  return this.http.post(this.baseUrl, task);
-}*/
+
 
 addTask(task: Task): Observable<any> {
   task.status = 'todo';

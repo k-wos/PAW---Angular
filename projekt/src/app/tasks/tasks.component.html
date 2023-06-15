@@ -1,33 +1,41 @@
 <div class="task-content">
   <app-add-task></app-add-task>
-  <table>
-    <tr>
-      <th>Nazwa</th>
-      <th>Priorytet</th>
-      <th>Funkcjonalność</th>
-      <th>Przewidywany czas wykonania</th>
-      <th>Stan</th>
-      <th>Data dodania</th>
-      <th>Data startu</th>
-      <th>Data zakończenia</th>
-      <th>Użytkownik odpowiedzialny</th>
-      <th>Akcje</th>
-    </tr>
-    <tr *ngFor="let task of tasks">
-      <td>{{ task.name }}</td>
-      <td>{{ task.priority }}</td>
-      <td>{{ task.functionality?.name }}</td>
-      <td>{{ task.estimatedTime }}</td>
-      <td>{{ task.status }}</td>
-      <td>{{ task.createdDate }}</td>
-      <td>{{ task.startDate }}</td>
-      <td>{{ task.endDate }}</td>
-      <td>{{ task.assignedUser }}</td>
-      <td>
-        <button (click)="showDetails(task)">Szczegóły</button>
-        <button>Edytuj</button>
-        <button (click)="deleteTask(task.id)">Usuń</button>
-      </td>
-    </tr>
-  </table>
+  <div class="main-content">
+    <table>
+      <tr>
+        <th>Nazwa</th>
+        <th>Priorytet</th>
+        <th>Funkcjonalność</th>
+        <th>Przewidywany czas wykonania</th>
+        <th>Stan</th>
+        <th>Data dodania</th>
+        <th>Data startu</th>
+        <th>Data zakończenia</th>
+        <th>Użytkownik odpowiedzialny</th>
+        <th>Akcje</th>
+      </tr>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.name }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ task.functionality?.name }}</td>
+        <td>{{ task.estimatedTime }}</td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.createdDate }}</td>
+        <td>{{ task.startDate }}</td>
+        <td>{{ task.endDate }}</td>
+        <td>{{ task.assignedUser }}</td>
+        <td>
+          <button (click)="showDetails(task)">Szczegóły</button>
+          <button (click)="editTask(task)">Edytuj</button>
+          <button (click)="deleteTask(task.id)">Usuń</button>
+        </td>
+      </tr>
+    </table>
+    <app-edit-task
+      *ngIf="selectedTask"
+      [task]="selectedTask"
+      (saveTask)="updateTask($event)"
+      (closeForm)="closeEditForm()"
+    ></app-edit-task>
+  </div>
 </div>

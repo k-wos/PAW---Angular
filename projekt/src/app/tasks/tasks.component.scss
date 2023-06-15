@@ -50,3 +50,7 @@ button:hover {
   background-color: #999;
   color: #fff;
 }
+.main-content {
+  display: flex;
+  flex-direction: column;
+}

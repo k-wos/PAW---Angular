@@ -6,7 +6,7 @@
       "description": "Opis funkcjonalności 1",
       "priority": "Niski",
       "project": "Projekt 1",
-      "owner": "Właściciel 1",
+      "owner": "Właściciel 12",
       "status": "todo",
       "tasks": [
         {
@@ -19,7 +19,7 @@
     },
     {
       "id": 2,
-      "name": "Funkcjonalność 2",
+      "name": "Funkcjonalność 2 -e",
       "description": "Opis funkcjonalności 2",
       "priority": "Średni",
       "project": "Projekt 2",
@@ -72,6 +72,10 @@
       "name": "dsadsa",
       "status": "todo",
       "id": 4
+    },
+    {
+      "status": "todo",
+      "id": 5
     }
   ],
   "users": [
@@ -139,7 +143,7 @@
       }
     },
     {
-      "name": "angileki",
+      "name": "angileki22",
       "functionalityId": 2,
       "status": "done",
       "createdDate": "14.06.2023, 20:01:02",
@@ -180,7 +184,7 @@
     },
     {
       "status": "todo",
-      "createdDate": "15.06.2023, 16:53:45",
+      "createdDate": "15.06.2023, 17:54:26",
       "assignedUser": "John Doe",
       "id": 8
     }

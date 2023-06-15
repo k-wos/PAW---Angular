@@ -12,6 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class TasksComponent {
   tasks: Task[] = [];
+  selectedTask: Task | null = null;
 
   constructor(private taskService: TaskService, private dialog: MatDialog) { }
 
@@ -34,6 +35,13 @@ export class TasksComponent {
     })
   }
 }
+updateTask(task: Task): void{
+  this.taskService.updateTask(task)
+    .subscribe(() => {
+      this.getTasks();
+      this.selectedTask = null;
+    })
+}
 showDetails(task: Task): void {
   const dialogRef = this.dialog.open(TaskDetailsComponent, {
     width: '400px',
@@ -42,6 +50,15 @@ showDetails(task: Task): void {
   dialogRef.afterClosed().subscribe(result => {
     console.log('Dialog został zamknięty');
   });
+}
+
+editTask(task:Task): void {
+  this.selectedTask = task;
+}
+
+closeEditForm(): void {
+  location.reload();
+  this.selectedTask = null;
 }
 
 }
