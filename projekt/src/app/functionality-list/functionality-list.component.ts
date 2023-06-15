@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Functionality } from '../models/Functionality';
 import { FunctionalityService } from '../services/Functionality.service';
+import { FunctionalityDetailsComponent } from '../functionality-details/functionality-details.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-functionality-list',
@@ -13,7 +16,7 @@ export class FunctionalityListComponent implements OnInit {
 
   newFunctionality: Functionality = new Functionality();
 
-  constructor(private functionalityService: FunctionalityService) { }
+  constructor(private functionalityService: FunctionalityService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getFunctionalities();
@@ -66,6 +69,12 @@ export class FunctionalityListComponent implements OnInit {
   }
 
   showDetails(functionality: Functionality): void {
-    
+     const dialogRef = this.dialog.open(FunctionalityDetailsComponent, {
+    width: '400px',
+    data: functionality,
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('Dialog został zamknięty');
+  });
   }
 }

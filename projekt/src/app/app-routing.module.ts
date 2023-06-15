@@ -5,6 +5,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { KanbanComponent } from './kanban/kanban.component';
 
 const routes: Routes = [
+  { path: '', component: FunctionalityListComponent },
   { path: 'functionality', component: FunctionalityListComponent },
   { path: 'tasks', component: TasksComponent },
   { path: 'kanban', component: KanbanComponent },

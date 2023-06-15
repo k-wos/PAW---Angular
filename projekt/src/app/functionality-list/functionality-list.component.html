@@ -20,7 +20,7 @@
       <span>{{ functionality.owner }}</span>
       <span>{{ functionality.status }}</span>
       <span>
-        <button>Szczegóły</button>
+        <button (click)="showDetails(functionality)">Szczegóły</button>
         <button (click)="editFunctionality(functionality)">Edytuj</button>
         <button (click)="deleteFunctionality(functionality.id)">Usuń</button>
       </span>

@@ -20,6 +20,8 @@ export class FunctionalityService {
   addFunctionality(functionality: Functionality): Observable<any> {
     location.reload();
     functionality.status = 'todo';
+    functionality.owner = 'John Doe';
+    functionality.project = 'Przykładowy projekt'
     return this.http.post(this.baseUrl, functionality);
   }
 
