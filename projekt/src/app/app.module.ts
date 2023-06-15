@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { FunctionalityDetailsComponent } from './functionality-details/functionality-details.component';
+import { EditTaskComponent } from './edit-task/edit-task.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { FunctionalityDetailsComponent } from './functionality-details/functiona
       KanbanComponent,
       TaskDetailsComponent,
       FunctionalityDetailsComponent,
+      EditTaskComponent,
       
       
    ],
