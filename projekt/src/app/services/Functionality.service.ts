@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin, switchMap } from 'rxjs';
 import { Functionality } from '../models/Functionality';
 import * as  json from  '../../../db.json'
 
@@ -31,5 +31,21 @@ export class FunctionalityService {
   deleteFunctionality(id: number): Observable<any> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete(url);
+  }
+  deleteTaskFromFunctionalities(taskId: number): Observable<any> {
+    return this.getFunctionalities().pipe(
+      switchMap((functionalities: Functionality[]) => {
+        const updateObservables: Observable<any>[] = [];
+
+        for (const functionality of functionalities) {
+          if (functionality.tasks && functionality.tasks.some(task => task.id === taskId)) {
+            functionality.tasks = functionality.tasks.filter(task => task.id !== taskId);
+            updateObservables.push(this.updateFunctionality(functionality));
+          }
+        }
+
+        return forkJoin(updateObservables);
+      })
+    );
   }
 }

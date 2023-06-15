@@ -51,32 +51,30 @@ addTask(task: Task): Observable<any> {
   task.createdDate = currentDate;
   task.assignedUser = "John Doe";
   const functionalityId = task.functionalityId || 0; 
-  location.reload();
+ 
+  
   return this.http.post(this.baseUrl, task).pipe(
     switchMap((response: any) => {
-      
       if (response && response.id) {
+        const taskId = response.id;
         
         return this.getFunctionality(functionalityId).pipe(
           switchMap((functionality: Functionality) => {
-            
             if (functionality && functionality.tasks) {
+              task.id = taskId; // Set the task id
               functionality.tasks.push(task);
             } else {
-              functionality.tasks = [task];
+              functionality.tasks = [{ ...task, id: taskId }]; 
             }
-
             
             return this.functionalityService.updateFunctionality(functionality);
           })
         );
       } else {
-        
         return throwError('Nie udało się dodać zadania.');
       }
     })
   );
-  
 }
 
 updateTask(task: Task): Observable<any> {
@@ -86,6 +84,9 @@ updateTask(task: Task): Observable<any> {
 
 deleteTask(id: number): Observable<any> {
   const url = `${this.baseUrl}/${id}`;
-  return this.http.delete(url);
+  return this.http.delete(url).pipe(
+    switchMap(() => this.functionalityService.deleteTaskFromFunctionalities(id))
+  );
 }
+
 }

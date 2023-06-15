@@ -8,5 +8,6 @@ export class Functionality {
     project?: string;
     owner?: string;
     status?: string;
+    taskId?: number;
     tasks?: Task[];
   }
